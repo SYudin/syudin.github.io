@@ -11,6 +11,32 @@
     <script>
       new WOW().init();
     </script>
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+      
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+      
+            // Store hash
+            var hash = this.hash;
+      
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+         
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+    </script>
   </head><body class="homepage">
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -54,36 +80,38 @@
             но по эксплуатационным характеристикам превосходит многие их них</p>
           <p>
             <br>
-            <a class="btn btn-lg btn-primary" href="#" role="button">Преимущества</a>
+            <a class="btn btn-lg btn-primary" href="#features" role="button">Преимущества</a>
           </p>
-        </div>
-      </div>
-    </div>
-    <div class="section" id="features">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="https://ununsplash.imgix.net/photo-1413896235942-39c2eb7cd584?w=1024&amp;q=50&amp;fm=jpg&amp;s=82734c02c2c6a780dc31f24c54077dd6" class="img-responsive">
-          </div>
-          <div class="col-md-6">
-            <h1 class="wow animated fadeInDown">A title</h1>
-            <h3 class="wow animated fadeInUp">A subtitle</h3>
-            <p class="wow animated fadeInRight">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-              nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-              enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-              felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-              elementum semper nisi.</p>
-          </div>
         </div>
       </div>
     </div>
     <div class="section">
       <div class="container">
-        <div class="row">
+        <div class="row" style="padding-top: 50px" id="features">
           <div class="col-md-6">
+            <img class="img-responsive" src="img/federation.jpg" style="height: 50%">
+          </div>
+          <div class="col-md-6">
+            <h1 class="wow animated fadeInDown">Сделано в России</h1>
+            <!--h3 class="wow animated fadeInUp">A subtitle</h3-->
+            <p class="animated fadeInRight text-justify wow">
+              <br>В условиях жесткой конкуренции с зарубежными производителями, сосредоточение
+              научных и производственных ресурсов компании на территории России позволяет
+              до минимума сократить процесс создания и вывода на рынок новых инновационных
+              материалов.
+              <br>
+              <br>Имидж надежного производителя, новаторский подход к разработке рецептур
+              продукции, добросовестное выполнение обязательств перед заказчиком и ориенторванность
+              на потребителя делают БАСА ценным партнером для любого покупателя лакокрасочной
+              продукции.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container-fluide">
+        <div class="row">
+          <div class="col-md-6" style="padding-left: 50px">
             <h1>A title</h1>
             <h3>A subtitle</h3>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
